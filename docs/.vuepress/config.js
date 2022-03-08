@@ -45,20 +45,7 @@ module.exports = {
     sidebar: {
       '/interview/': [
         '',
-        '01-skill',
-        '02-html',
-        '04-css',
-        '04-css2',
-        '04-css3',
-        '04-css4',
-        '05-javascript',
-        '06-output',
-        '08-vue',
-        '09-vue',
-        '10-perfomance',
-        '11-webpack',
-        '12-browser',
-        '14-algorithm',
+        '01-skill'
       ],
       '/about/': [''],
     },
