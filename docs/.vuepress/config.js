@@ -53,7 +53,6 @@ module.exports = {
         '04-css4',
         '05-javascript',
         '06-output',
-        '07-coding',
         '08-vue',
         '09-vue',
         '10-perfomance',
