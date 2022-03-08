@@ -333,19 +333,6 @@ self.addEventListener('install', e => {
     })
   )
 })
-// 拦截所有请求事件
-// 如果缓存中已经有请求的数据就直接用缓存，否则去请求数据
-self.addEventListener('fetch', e => {
-  e.respondWith(
-   caches && caches.match(e.request).then(function(response) {
-      if (response) {
-        return response
-      }
-      console.log('fetch source')
-    })
-  )
-})
-```
 
 打开页面，可以在开发者工具中的 `Application` 看到 Service Worker 已经启动了：
 
