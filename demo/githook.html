@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>git-hooks | 松子知识天地</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="./favicon.ico">
+    <meta name="description" content="松子的学习基地是松子的个人博客，用于记录学习笔记、分享音乐、书籍、旅行等个人兴趣的站点。">
+    
+    <link rel="preload" href="./assets/css/0.styles.a246c231.css" as="style"><link rel="preload" href="./assets/js/app.90a34dc1.js" as="script"><link rel="preload" href="./assets/js/2.cca5c42a.js" as="script"><link rel="preload" href="./assets/js/9.ca4117ec.js" as="script"><link rel="prefetch" href="./assets/js/10.d2cd596b.js"><link rel="prefetch" href="./assets/js/11.a2dc600f.js"><link rel="prefetch" href="./assets/js/12.966c601a.js"><link rel="prefetch" href="./assets/js/13.ea61ebd2.js"><link rel="prefetch" href="./assets/js/14.20b08f6a.js"><link rel="prefetch" href="./assets/js/15.72461fe0.js"><link rel="prefetch" href="./assets/js/16.9beb36e7.js"><link rel="prefetch" href="./assets/js/17.6223c4b6.js"><link rel="prefetch" href="./assets/js/18.f5940889.js"><link rel="prefetch" href="./assets/js/19.6d8b62d1.js"><link rel="prefetch" href="./assets/js/20.6ed3be57.js"><link rel="prefetch" href="./assets/js/21.94a2299f.js"><link rel="prefetch" href="./assets/js/22.eb69cb34.js"><link rel="prefetch" href="./assets/js/23.dea9fcb5.js"><link rel="prefetch" href="./assets/js/24.75207362.js"><link rel="prefetch" href="./assets/js/25.b476e492.js"><link rel="prefetch" href="./assets/js/26.9a60fe3b.js"><link rel="prefetch" href="./assets/js/3.68b5e5e4.js"><link rel="prefetch" href="./assets/js/4.a5a0bdc3.js"><link rel="prefetch" href="./assets/js/5.79cfe1c9.js"><link rel="prefetch" href="./assets/js/6.0b854729.js"><link rel="prefetch" href="./assets/js/7.4e12879e.js"><link rel="prefetch" href="./assets/js/8.da950b9a.js">
+    <link rel="stylesheet" href="./assets/css/0.styles.a246c231.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/./" class="home-link router-link-active"><img src="./logo.png" alt="松子知识天地" class="logo"> <span class="site-name can-hide">松子知识天地</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/./interview/" class="nav-link">
+  面经宝典
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="关于" class="dropdown-title"><span class="title">关于</span> <span class="arrow down"></span></button> <button type="button" aria-label="关于" class="mobile-dropdown-title"><span class="title">关于</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/./about/" class="nav-link">
+  关于我
+</a></li><li class="dropdown-item"><!----> <a href="https://github.com/amjanney" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/430664288573789" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/./interview/" class="nav-link">
+  面经宝典
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="关于" class="dropdown-title"><span class="title">关于</span> <span class="arrow down"></span></button> <button type="button" aria-label="关于" class="mobile-dropdown-title"><span class="title">关于</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/./about/" class="nav-link">
+  关于我
+</a></li><li class="dropdown-item"><!----> <a href="https://github.com/amjanney" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/430664288573789" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="git-hooks"><a href="#git-hooks" class="header-anchor">#</a> git-hooks</h3> <p>我们回到项目的根目录下。运行 ls -a 命令 ———— “-a”可以显示隐藏目录(目录名的第一位是.)。
+我们可以看到，存在一个&quot;.git&quot;名称的文件夹。
+事实上，在我们项目中根目录下运行 git 命令时，git 会根据它来工作。
+接来下我们进入到这个文件夹，进一步查看它内部的内容。</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token builtin class-name">cd</span> .git
+<span class="token function">ls</span> -a
+</code></pre></div><p>我们发现它内部还挺有料！不慌，我们这节课仅仅只讲到其中的一个内容 ———— hooks
+可以看到，当前目录下存在一个 hooks 文件夹，顾名思义，这个文件夹提供了 git 命令相关的钩子。
+继续往里看。</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token builtin class-name">cd</span> hooks
+<span class="token function">ls</span> -a
+</code></pre></div><p>ok，那我们我们可以看到有很多 git 命令相关的文件名。比如&quot;pre-commit.sample pre-push.sample&quot;。
+回到正题——我们期望在 git 提交(commit)前，对我们的代码进行检测，如果不能通过检测，就无法提交我们的代码。
+那么自然而然的，这个动作的时机应该是？————&quot;pre commit&quot;,也就是 commit 之前。
+那么现在，我们查看一下 pre-commit.sample 的内容。</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># cat命令可以查看一个文件的内容</span>
+<span class="token function">cat</span> pre-commit.sample
+</code></pre></div><p>OK，它返回了这样的内容，是一串 shell 注释。翻译过来大概意思是，这是个示例钩子，然后我们看到了这一句话</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># To enable this hook, rename this file to &quot;pre-commit&quot;.</span>
+</code></pre></div><p>意思是要启用这个钩子的话，我们就把这个文件的后缀名去掉。</p> <p>虽然这样对我们本地来讲是可行的，但要注意，.git 文件夹的改动无法同步到远端仓库。
+所以我们期望将 git-hook 的执行权移交到外面来。</p> <p>好的，我们回到项目的根目录下,然后我们新建一个文件夹，暂时命名为&quot;.mygithooks&quot;
+然后在此文件夹下，新增一个 git-hook 文件,命名为&quot;pre-commit&quot;，并写入以下内容：</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token builtin class-name">echo</span> pre-commit执行啦
+</code></pre></div><p>好了，我们新建了自己的 git-hook，但此时 git 并不能识别。下面我们执行这行命令：</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 项目根目录下</span>
+<span class="token function">git</span> config core.hooksPath .mygithooks/pre-commit
+</code></pre></div><p>上述命令给我们自己的文件，配置了 git-hook 的执行权限。</p> <p>但这个时候我们 git commit 的话，可能会报这样的 waring，并且没有执行我们的 shell：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>hint: The <span class="token string">'pre-commit'</span> hook was ignored because it's not <span class="token builtin class-name">set</span> as executable.
+hint: You can disable this warning with <span class="token variable"><span class="token variable">`</span><span class="token function">git</span> config advice.ignoredHook <span class="token boolean">false</span><span class="token variable">`</span></span>
+</code></pre></div><p>这是因为我们的操作系统没有给出这个文件的可执行权限。
+因此我们得再执行这样一句命令：</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">chmod</span> +x .mygithooks/pre-commit
+</code></pre></div><p>ok！现在我们尝试执行 git add . &amp;&amp; git commit -m &quot;any meesage&quot;
+我们发现控制台日志会先打印 “pre-commit 执行啦”
+这意味着成功啦！</p> <h3 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h3> <p>也就是说，我们搞 git-hook 的话，要分三步走：</p> <ol><li>新增任意名称文件夹以及文件 pre-commit(这个文件名字比如跟要使用的 git-hook 名字一致)！</li> <li>执行以下命令来移交 git-hook 的配置权限</li></ol> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">git</span> config core.hooksPath .mygithooks/pre-commit
+</code></pre></div><ol start="3"><li>给这个文件添加可执行权限：</li></ol> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">chmod</span> +x .mygithooks/pre-commit
+</code></pre></div><p>然后就成功啦。</p> <p>这时候我们可以在 pre-commit 里写任意脚本，比如：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>eslint src
+</code></pre></div><p>当 eslint 扫描代码，出现 error 时，会在结束扫描时将退出码设为大于 0 的数字。
+也就是会报错，这时候 commit 就无法往下执行啦，我们成功的拦截了此次错误操作。</p> <h3 id="husky"><a href="#husky" class="header-anchor">#</a> husky</h3> <p>husky 在升级到 7.x 后，做了跟我们上述同样的事。
+安装它之前，我们需要在 package.json 中的 script 里，先添加</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token string-property property">&quot;sctript&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">//...others</span>
+    <span class="token string-property property">&quot;prepare&quot;</span><span class="token operator">:</span> <span class="token string">&quot;husky install&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>prepare 是一个 npm 钩子，意思是安装依赖的时候，会先执行 husky install 命令。
+这个命令就做了上述的 123 这三件事！
+我们安装了 7.x 的 husky 会发现，项目根目录下生成了.husky 的文件夹。
+当然，7.x 的 husky 似乎是有 bug 的，如果不能正常使用，那么我们只需要验证两件事：</p> <ol><li>是否移交了 git-hook 的配置权限？
+执行命令 &quot;git config --list&quot;查看 core.hooksPath 配置是否存在，是否正确指向了.husky。
+如果没有，我们只需要手动的给加上就行：</li></ol> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">git</span> config core.hooksPath .husky
+</code></pre></div><ol start="2"><li>是否是可执行文件？
+参考上述总结中的 3 即可
+这时我们的 husky 就正常了。</li></ol> <h3 id="melody-core-melody-git-hook"><a href="#melody-core-melody-git-hook" class="header-anchor">#</a> @melody-core/melody-git-hook</h3> <p>这是我连夜撸出来的一个工具，跟 husky 有一样的功能。但没有这么多 bug。
+可以参考这个文档来使用它
+https://github.com/melody-core/melody-git-hook</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">3/7/2022, 8:33:13 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="./assets/js/app.90a34dc1.js" defer></script><script src="./assets/js/2.cca5c42a.js" defer></script><script src="./assets/js/9.ca4117ec.js" defer></script>
+  </body>
+</html>
